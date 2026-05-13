@@ -17,30 +17,139 @@
     <header>
         <a href="/"> Mohammad Javid Moradi</a>
         <nav>
-            <a target="_blank" href="https://github.com/moradi1412"> <i class="fa-brands fa-github"></i> Github</a>
-            <a target="_blank" href="https://www.linkedin.com/in/javid-moradi"> <i class="fa-brands fa-linkedin"></i> Linkedin</a>
-            <a href="#contact">Contact</a>
+            <a target="_blank" href="https://github.com/moradi1412"> <i class="fa-brands fa-github"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/in/javid-moradi"> <i class="fa-brands fa-linkedin"></i>
+            </a>
         </nav>
     </header>
     <main>
         <section id="home">
-            <h2>Welcome to My Portfolio</h2>
-            <p>This is the home section of my portfolio.</p>
+            <div class="intro-header">
+                <h1>Hiya! Mohammad Javid, checking in.</h1>
+                <p>Software Developer</p>
+            </div>
+            <h5 class="intro-description">
+                Versatile IT Support Specialist and
+                Full Stack Developer dedicated to resolving complex technical
+                challenges and building dynamic, user-centric web applications.
+                I love bodybuilding and comptete in National Physique competitions.
+            </h5>
+            <div class="container">
+                <a href="http://" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-solid link-arrow fa-arrow-right"></i>
+                    <a href="mailto:moradi.javid@gmail.com">Email me</a>
+
+                    <a target="_blank" href="https://github.com/moradi1412"> <i class="fa-brands fa-github"></i>
+                        Github</a>
+                    <a target="_blank" href="https://www.linkedin.com/in/javid-moradi"> <i
+                            class="fa-brands fa-linkedin"></i> Linkedin</a>
+            </div>
+            <button id="playButton">Play Game</button>
+            <input style="display: none;" type="color" name="color-picker" id="colorPicker" value="#ffffff"
+                onchange="" />
+            <button style="display: none;" id="resetColor" onclick="document.body.style.backgroundColor = '#ffffff'">
+                Reset Color</button>
         </section>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>This is the about section of my portfolio.</p>
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-table-wrapper">
+                <table class="skills-table">
+                    <tr>
+                        <th>Skill Area</th>
+                        <th>Details</th>
+                    </tr>
+                    <tr>
+                        <th>Frontend Development</th>
+                        <td>
+                            <strong>Languages:</strong> HTML, CSS, JavaScript<br>
+                            <strong>Frameworks & Libraries:</strong> React, Handlebars.js<br>
+                            <strong>Integration:</strong> RESTful APIs (Open Trivia DB, Giphy)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Backend & Database</th>
+                        <td>
+                            <strong>Environment & Frameworks:</strong> Node.js, Express<br>
+                            <strong>Data & APIs:</strong> GraphQL, Apollo, MongoDB<br>
+                            <strong>Security & Payments:</strong> JWT, bcrypt, Stripe
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>IT Infrastructure & Support</th>
+                        <td>
+                            <strong>Systems:</strong> Windows/macOS administration, Microsoft 365<br>
+                            <strong>Networking & Hardware:</strong> Local network connectivity, Hardware/Software
+                            troubleshooting<br>
+                            <strong>Administration:</strong> User accounts & access permissions<br>
+                            <strong>Certifications:</strong> CompTIA A+, Google IT Support Professional
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </section>
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <p>This is the contact section of my portfolio.</p>
+
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Trivia Game</h3>
+                    <p>A dynamic trivia game built with React, utilizing the Open Trivia DB API for questions and Giphy
+                        API for visual feedback. Features include user authentication, score tracking, and a responsive
+                        design.</p>
+                    <a href="https://github.com/moradi1412/Trivia-Game" target="_blank" rel="noopener noreferrer">View
+                        Project</a>
+                    <div class="tech-stack">
+                        <span class="tech">React</span>
+                        <span class="tech">JavaScript</span>
+                        <span class="tech">REST API</span>
+                    </div>
+                </div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Fitness Tracker</h3>
+                    <p>A full-stack fitness tracking application developed with Node.js, Express, MongoDB, and React. It
+                        allows users to log workouts, track progress, and visualize data through interactive charts.</p>
+                    <a href="https://github.com/moradi1412/Fitness-Tracker" target="_blank"
+                        rel="noopener noreferrer">View Project</a>
+                    <div class="tech-stack">
+                        <span class="tech">Node.js</span>
+                        <span class="tech">Express</span>
+                        <span class="tech">MongoDB</span>
+                    </div>
+                </div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Task Manager</h3>
+                    <p>A simple yet effective task management application built with React and Firebase. Users can
+                        create, update, and delete tasks, with real-time synchronization across devices.</p>
+                    <a href="https://github.com/moradi1412/Task-Manager" target="_blank" rel="noopener noreferrer">View
+                        Project</a>
+                    <div class="tech-stack">
+                        <span class="tech">React</span>
+                        <span class="tech">Firebase</span>
+                    </div>
+                </div>
+            </div>
+
         </section>
+
     </main>
     <footer>
         <p>&copy; 2026 Mohammad Javid Moradi Portfolio. All rights reserved.</p>
-        <a href="https://github.com/moradi1412/Moradi-PortFolio" target="_blank" rel="noopener noreferrer">Repo Portfolio</a>
+        <a href="https://github.com/moradi1412/Moradi-PortFolio" target="_blank" rel="noopener noreferrer">Repo
+            Portfolio</a>
     </footer>
-    <script src="/"></script>
+    <script>
+        document.getElementById('playButton').addEventListener('click', function () {
+            var color = prompt("Choose a background color:");
+            if (color) {
+                document.body.style.backgroundColor = color;
+            }
+        });
+    </script>
 </body>
 
 </html>
