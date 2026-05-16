@@ -35,20 +35,28 @@
                 I love bodybuilding and comptete in National Physique competitions.
             </h5>
             <div class="container">
-                <a href="http://" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-solid link-arrow fa-arrow-right"></i>
-                    <a href="mailto:moradi.javid@gmail.com">Email me</a>
-
-                    <a target="_blank" href="https://github.com/moradi1412"> <i class="fa-brands fa-github"></i>
-                        Github</a>
-                    <a target="_blank" href="https://www.linkedin.com/in/javid-moradi"> <i
-                            class="fa-brands fa-linkedin"></i> Linkedin</a>
+                <a class="btn" href="mailto:moradi.javid@gmail.com" target="_blank" rel="noopener noreferrer">
+                    Email me <i class="fa-solid link-arrow fa-arrow-right"></i>
+                </a>
+                <a class="btn" target="_blank" href="https://github.com/moradi1412" rel="noopener noreferrer">
+                    <i class="fa-brands fa-github"></i> Github
+                </a>
+                <a class="btn" target="_blank" href="https://www.linkedin.com/in/javid-moradi" rel="noopener noreferrer">
+                    <i class="fa-brands fa-linkedin"></i> Linkedin
+                </a>
             </div>
-            <button id="playButton">Play Game</button>
-            <input style="display: none;" type="color" name="color-picker" id="colorPicker" value="#ffffff"
-                onchange="" />
-            <button style="display: none;" id="resetColor" onclick="document.body.style.backgroundColor = '#ffffff'">
-                Reset Color</button>
+
+            <button id="playButton" onclick="playGame()">Play Game</button>
+            <div class="color-controls">
+                <input type="color" name="color-picker" id="colorPicker" value="#ffffff" onchange="changeBackgroundColor()" />
+                <button id="resetColor" onclick="resetBackgroundColor()">Reset Color</button>
+                <p id="colorStatus"></p>
+            </div>
+
+
+
+
+
         </section>
         <section id="skills">
             <h2>Skills</h2>
@@ -154,12 +162,34 @@
             Portfolio</a>
     </footer>
     <script>
-        document.getElementById('playButton').addEventListener('click', function () {
-            var color = prompt("Choose a background color:");
-            if (color) {
-                document.body.style.backgroundColor = color;
-            }
-        });
+
+        const Body = document.querySelector('body');
+        const ColorPicker = document.getElementById('colorPicker');
+        const colorStatus = document.getElementById('colorStatus');
+        const resetButton = document.getElementById('resetColor');
+        const playButton = document.getElementById('playButton');
+
+        function playGame() {
+            ColorPicker.style.display = 'inline-block';
+            resetButton.style.display = 'inline-block';
+            colorStatus.textContent = '';
+            playButton.style.display = 'none';
+        }
+
+        function changeBackgroundColor() {
+            const selectedColor = ColorPicker.value;
+            Body.style.backgroundColor = selectedColor;
+            colorStatus.textContent = `Background color changed to: ${selectedColor}`;
+            resetButton.style.display = 'inline-block';
+        }
+
+        function resetBackgroundColor() {
+            Body.style.backgroundColor = '#ffffff';
+            colorStatus.textContent = '';
+            resetButton.style.display = 'none';
+            ColorPicker.style.display = 'none';
+            playButton.style.display = 'block';
+        }
     </script>
 </body>
 

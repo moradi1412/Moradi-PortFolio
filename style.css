@@ -10,37 +10,6 @@ body {
 }
 
 
-<<<<<<< HEAD
-header {
-    background: rgba(255, 255, 255, 0.08);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-    padding: 1rem 2rem;
-    justify-content: space-between;
-    align-items: center;
-}
-
-main {
-    flex: 1;
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}   
-
-
-footer {
-    background: rgba(255, 255, 255, 0.08);
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
-    padding: 1rem 2rem;
-    text-align: center;
-    font-size: 0.875rem;
-    color: #e6e6ff;
-}   
-
-
-
-
-
-=======
 header, 
 main, 
 footer {
@@ -85,7 +54,6 @@ main {
 section {
     gap: 2rem;
 }
->>>>>>> 3a6cb0217151a891e95bbad305c33f5836954561
 
 
 img {
